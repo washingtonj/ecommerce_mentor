@@ -1,8 +1,8 @@
 import { Box, HStack, Container, Avatar } from '@chakra-ui/react'
 import { Logo, Menu, Cart } from 'assets/icons'
+import { PublicImageLoader } from 'utils'
 import * as Styles from './TheHeader.styles'
 
-import AvatarImage from 'assets/images/image-avatar.png'
 
 
 const TheHeader = () => {
@@ -11,13 +11,12 @@ const TheHeader = () => {
       <Container {...Styles.Container} >
         <HStack {...Styles.LeftStack}>
           <Menu width="20" height="15" />
-          <Logo width="full" height="24" />
+          <Logo width="100%" height="24" />
         </HStack>
         <HStack {...Styles.RightStack}>
           <Cart width="22" height="20" />
-          <Avatar {...Styles.Avatar} src={AvatarImage} />
+          <Avatar {...Styles.Avatar} src={PublicImageLoader('/images/image-avatar.png')} />
         </HStack>
-        <Box></Box>
       </Container>
     </Box>
   )
