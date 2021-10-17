@@ -1,0 +1,36 @@
+import { Flex, Button, Text } from '@chakra-ui/react'
+import { Minus, Plus, Cart } from 'assets/icons'
+import { useState } from 'react'
+import * as Styles from './ContentPurchase.styles'
+
+const ContentPurchase = () => {
+  const [quantity, setQuantity] = useState(0)
+
+  function increase() {
+    setQuantity(prev => prev + 1)
+  }
+
+  function decrease() {
+    if (quantity > 0) setQuantity(prev => prev - 1)
+  }
+
+
+  return (
+    <>
+      <Flex { ...Styles.QuantityContainer }>
+        <Button data-testid="minus" onClick={() => decrease()}>
+          <Minus />
+        </Button>
+        <Text data-testid="counter" fontWeight="bold">{ quantity }</Text>
+        <Button data-testid="plus" onClick={() => increase()}>
+          <Plus />
+        </Button>
+      </Flex>
+      <Button {...Styles.Button} leftIcon={<Cart width="22" height="20" fill='white' />}>
+        Add to cart
+      </Button>
+    </>
+  )
+}
+
+export default ContentPurchase
