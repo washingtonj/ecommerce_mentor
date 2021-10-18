@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.js": "/static/js/main.d8d14a10.chunk.js",
-    "main.js.map": "/static/js/main.d8d14a10.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.70d698fe.js",
-    "runtime-main.js.map": "/static/js/runtime-main.70d698fe.js.map",
-    "static/js/2.b0b11b47.chunk.js": "/static/js/2.b0b11b47.chunk.js",
-    "static/js/2.b0b11b47.chunk.js.map": "/static/js/2.b0b11b47.chunk.js.map",
-    "index.html": "/index.html",
-    "static/js/2.b0b11b47.chunk.js.LICENSE.txt": "/static/js/2.b0b11b47.chunk.js.LICENSE.txt",
-    "static/media/icon-cart.763b6bfd.svg": "/static/media/icon-cart.763b6bfd.svg",
-    "static/media/icon-close.c3904486.svg": "/static/media/icon-close.c3904486.svg",
-    "static/media/icon-delete.1fd1f1f7.svg": "/static/media/icon-delete.1fd1f1f7.svg",
-    "static/media/icon-menu.58801627.svg": "/static/media/icon-menu.58801627.svg",
-    "static/media/icon-minus.f5073aa8.svg": "/static/media/icon-minus.f5073aa8.svg",
-    "static/media/icon-next.9621183a.svg": "/static/media/icon-next.9621183a.svg",
-    "static/media/icon-plus.b297868c.svg": "/static/media/icon-plus.b297868c.svg",
-    "static/media/icon-previous.80616402.svg": "/static/media/icon-previous.80616402.svg",
-    "static/media/logo.fa270669.svg": "/static/media/logo.fa270669.svg"
+    "main.js": "/ecommerce_mentor/static/js/main.a14981b6.chunk.js",
+    "main.js.map": "/ecommerce_mentor/static/js/main.a14981b6.chunk.js.map",
+    "runtime-main.js": "/ecommerce_mentor/static/js/runtime-main.4593ab75.js",
+    "runtime-main.js.map": "/ecommerce_mentor/static/js/runtime-main.4593ab75.js.map",
+    "static/js/2.b0b11b47.chunk.js": "/ecommerce_mentor/static/js/2.b0b11b47.chunk.js",
+    "static/js/2.b0b11b47.chunk.js.map": "/ecommerce_mentor/static/js/2.b0b11b47.chunk.js.map",
+    "index.html": "/ecommerce_mentor/index.html",
+    "static/js/2.b0b11b47.chunk.js.LICENSE.txt": "/ecommerce_mentor/static/js/2.b0b11b47.chunk.js.LICENSE.txt",
+    "static/media/icon-cart.763b6bfd.svg": "/ecommerce_mentor/static/media/icon-cart.763b6bfd.svg",
+    "static/media/icon-close.c3904486.svg": "/ecommerce_mentor/static/media/icon-close.c3904486.svg",
+    "static/media/icon-delete.1fd1f1f7.svg": "/ecommerce_mentor/static/media/icon-delete.1fd1f1f7.svg",
+    "static/media/icon-menu.58801627.svg": "/ecommerce_mentor/static/media/icon-menu.58801627.svg",
+    "static/media/icon-minus.f5073aa8.svg": "/ecommerce_mentor/static/media/icon-minus.f5073aa8.svg",
+    "static/media/icon-next.9621183a.svg": "/ecommerce_mentor/static/media/icon-next.9621183a.svg",
+    "static/media/icon-plus.b297868c.svg": "/ecommerce_mentor/static/media/icon-plus.b297868c.svg",
+    "static/media/icon-previous.80616402.svg": "/ecommerce_mentor/static/media/icon-previous.80616402.svg",
+    "static/media/logo.fa270669.svg": "/ecommerce_mentor/static/media/logo.fa270669.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.70d698fe.js",
+    "static/js/runtime-main.4593ab75.js",
     "static/js/2.b0b11b47.chunk.js",
-    "static/js/main.d8d14a10.chunk.js"
+    "static/js/main.a14981b6.chunk.js"
   ]
 }
