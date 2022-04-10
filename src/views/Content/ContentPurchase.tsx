@@ -2,6 +2,7 @@ import { Flex, Button, Text, Tooltip } from '@chakra-ui/react'
 import { Minus, Plus, Cart } from 'assets/icons'
 import { useState } from 'react'
 import * as Styles from './ContentPurchase.styles'
+import { ButtonStyle } from 'styles/components'
 
 interface ContentPurchaseProps {
   onPurchase: (qty: number) => void
@@ -49,7 +50,7 @@ const ContentPurchase = (props: ContentPurchaseProps) => {
         </Flex>
       </Tooltip>
       <Button 
-        {...Styles.Button} 
+        {...ButtonStyle } 
         data-testid="purchase"
         leftIcon={<Cart width="22" height="20" fill='white' />}
         onClick={() => purchase()}

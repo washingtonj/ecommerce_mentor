@@ -27,6 +27,7 @@ export const HeaderText: TextProps = {
 }
 
 export const Body: FlexProps = {
+  flexDir: 'column',
   minHeight: 44,
   paddingY: 5,
   paddingX
@@ -44,7 +45,8 @@ export const ItemContainer: FlexProps = {
   height: '100%',
   flexDirection: 'row',
   justifyContent: 'center',
-  alignItems: 'center'
+  alignItems: 'center',
+  marginBottom: '5'
 }
 
 export const ItemImagem: ImageProps = {
