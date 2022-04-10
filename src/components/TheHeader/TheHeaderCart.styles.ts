@@ -1,20 +1,7 @@
-import { BoxProps, ButtonProps, FlexProps, ImageProps, TextProps } from '@chakra-ui/react'
+import { BoxProps, FlexProps, ImageProps, TextProps } from '@chakra-ui/react'
 import { SVGProps } from 'react'
 
 const paddingX = 5
-
-export const CartButton: ButtonProps = {
-  padding: 0,
-  background: 'transparent',
-  _hover: {
-    background: 'none'
-  }
-}
-
-export const Icon: SVGProps<SVGSVGElement> = {
-  width: "22",
-  height:"20"
-}
 
 export const Container: BoxProps = {
   position: 'absolute',

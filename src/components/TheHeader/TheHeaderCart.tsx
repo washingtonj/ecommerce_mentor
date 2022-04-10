@@ -1,71 +1,60 @@
 import { useRef } from "react";
-import {
-  Box,
-  Flex,
-  Text,
-  Button,
-  useOutsideClick,
-  Image,
-} from "@chakra-ui/react";
-import { Cart as CartIcon, Delete as DeleteIcon } from "assets/icons";
+import { Box, Flex, Text, useOutsideClick, Image } from "@chakra-ui/react";
+import { Delete as DeleteIcon } from "assets/icons";
 import * as Styles from "./TheHeaderCart.styles";
 import { PublicImageLoader, ToCurrency } from "utils";
-import { useCart } from "hooks";
+import { ICartItem } from "contexts";
 
-const TheHeaderCart = () => {
+interface TheHeaderCartProps {
+  onClose: () => void;
+  onRemove: (id: string) => void;
+  data: ICartItem[];
+}
+
+const TheHeaderCart = (props: TheHeaderCartProps) => {
   const ref = useRef(null);
 
-  const Cart = useCart();
+  const hasItem = props.data.length > 0;
 
   useOutsideClick({
     ref: ref,
-    handler: () => Cart.toggleCart(),
-    enabled: false,
+    handler: props.onClose,
+    enabled: true,
   });
 
   return (
-    <>
-      <Button {...Styles.CartButton} onClick={() => Cart.toggleCart()}>
-        <CartIcon {...Styles.Icon} />
-      </Button>
-
-      {Cart.isOpen && (
-        <Box {...Styles.Container} ref={ref}>
-          <Flex {...Styles.Header}>
-            <Text {...Styles.HeaderText}>Cart</Text>
-          </Flex>
-          <Flex {...Styles.Body}>
-            {Cart.hasItem ? (
-              Cart.items.map((item) => (
-                <Flex key={item.id} {...Styles.ItemContainer}>
-                  <Image
-                    {...Styles.ItemImagem}
-                    src={PublicImageLoader(item.imgUrl)}
-                  />
-                  <Flex {...Styles.ItemTextContainer}>
-                    <Text {...Styles.ItemTextTitle}>{item.name}</Text>
-                    <Flex {...Styles.ItemPriceContainer}>
-                      <Text {...Styles.ItemTextQty}>
-                        {ToCurrency(item.price, "USD")} x {item.quantity}
-                      </Text>
-                      <Text {...Styles.ItemTextTotal}>
-                        {ToCurrency(item.price * item.quantity, "USD")}
-                      </Text>
-                    </Flex>
-                  </Flex>
-                  <DeleteIcon
-                    {...Styles.ItemTrashIcon}
-                    onClick={() => Cart.removeItem(String(item.id))}
-                  />
+    <Box {...Styles.Container} ref={ref}>
+      <Flex {...Styles.Header}>
+        <Text {...Styles.HeaderText}>Cart</Text>
+      </Flex>
+      <Flex {...Styles.Body}>
+        {hasItem &&
+          props.data.map((item) => (
+            <Flex key={item.id} {...Styles.ItemContainer}>
+              <Image
+                {...Styles.ItemImagem}
+                src={PublicImageLoader(item.imgUrl)}
+              />
+              <Flex {...Styles.ItemTextContainer}>
+                <Text {...Styles.ItemTextTitle}>{item.name}</Text>
+                <Flex {...Styles.ItemPriceContainer}>
+                  <Text {...Styles.ItemTextQty}>
+                    {ToCurrency(item.price, "USD")} x {item.quantity}
+                  </Text>
+                  <Text {...Styles.ItemTextTotal}>
+                    {ToCurrency(item.price * item.quantity, "USD")}
+                  </Text>
                 </Flex>
-              ))
-            ) : (
-              <Text {...Styles.BodyEmptyText}>Your cart is empty.</Text>
-            )}
-          </Flex>
-        </Box>
-      )}
-    </>
+              </Flex>
+              <DeleteIcon
+                {...Styles.ItemTrashIcon}
+                onClick={() => props.onRemove(String(item.id))}
+              />
+            </Flex>
+          ))}
+        {!hasItem && <Text {...Styles.BodyEmptyText}>Your cart is empty.</Text>}
+      </Flex>
+    </Box>
   );
 };
 

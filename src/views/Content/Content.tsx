@@ -19,13 +19,14 @@ const Content = () => {
       price: valueWithDiscount,
       quantity: qty
     })
+    Cart.toggleCart()
+    window.scrollTo({ top: 0, behavior: "smooth" });
   }
   
 
   return (
     <Box pb="20">
       <ImageCarousel images={Data.images} />
-
       <Box px="6">
         <Stack spacing="6" mt="6" direction="column">
           <ContentDescription company={Data.company} model={Data.model}>

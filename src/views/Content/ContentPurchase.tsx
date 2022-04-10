@@ -21,7 +21,10 @@ const ContentPurchase = (props: ContentPurchaseProps) => {
 
   function purchase() {
     if (quantity === 0) setEmptyAlert(true)
-    else props.onPurchase(quantity)
+    else {
+      props.onPurchase(quantity)
+      setQuantity(0)
+    }
   }
 
   return (
