@@ -3,7 +3,11 @@ import { Minus, Plus, Cart } from 'assets/icons'
 import { useState } from 'react'
 import * as Styles from './ContentPurchase.styles'
 
-const ContentPurchase = () => {
+interface ContentPurchaseProps {
+  onPurchase: (qty: number) => void
+}
+
+const ContentPurchase = (props: ContentPurchaseProps) => {
   const [quantity, setQuantity] = useState(0)
   const [emptyAlert, setEmptyAlert] = useState(false)
 
@@ -17,6 +21,7 @@ const ContentPurchase = () => {
 
   function purchase() {
     if (quantity === 0) setEmptyAlert(true)
+    else props.onPurchase(quantity)
   }
 
   return (

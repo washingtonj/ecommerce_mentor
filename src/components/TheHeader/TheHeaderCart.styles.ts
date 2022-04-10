@@ -1,4 +1,4 @@
-import { BoxProps, ButtonProps, FlexProps, TextProps } from '@chakra-ui/react'
+import { BoxProps, ButtonProps, FlexProps, ImageProps, TextProps } from '@chakra-ui/react'
 import { SVGProps } from 'react'
 
 const paddingX = 5
@@ -41,6 +41,7 @@ export const HeaderText: TextProps = {
 
 export const Body: FlexProps = {
   minHeight: 44,
+  paddingY: 5,
   paddingX
 }
 
@@ -49,4 +50,36 @@ export const BodyEmptyText: TextProps = {
   textColor: 'gray.500',
   textAlign: 'center',
   margin: 'auto'
+}
+
+export const ItemContainer: FlexProps = {
+  flexDirection: 'row',
+  justifyContent: 'center' 
+}
+
+export const ItemImagem: ImageProps = {
+  width: '50px',
+  height: '50px',
+  borderRadius: 'md'
+}
+
+export const ItemTextContainer: FlexProps = {
+  flexDirection: 'column',
+  marginLeft: '5',
+  textColor: 'gray.500'
+}
+
+export const ItemTextTitle: TextProps = {
+  fontWeight: 'semibold'
+}
+
+export const ItemPriceContainer: FlexProps = {}
+
+export const ItemTextQty: TextProps = {
+  marginRight: '1.5'
+}
+
+export const ItemTextTotal: TextProps = {
+  fontWeight: 'bold',
+  textColor: 'black'
 }
