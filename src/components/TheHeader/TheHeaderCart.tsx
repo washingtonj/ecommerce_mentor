@@ -7,7 +7,7 @@ import {
   useOutsideClick,
   Image,
 } from "@chakra-ui/react";
-import { Cart as CartIcon } from "assets/icons";
+import { Cart as CartIcon, Delete as DeleteIcon } from "assets/icons";
 import * as Styles from "./TheHeaderCart.styles";
 import { PublicImageLoader, ToCurrency } from "utils";
 import { useCart } from "hooks";
@@ -53,6 +53,10 @@ const TheHeaderCart = () => {
                       </Text>
                     </Flex>
                   </Flex>
+                  <DeleteIcon
+                    {...Styles.ItemTrashIcon}
+                    onClick={() => Cart.removeItem(String(item.id))}
+                  />
                 </Flex>
               ))
             ) : (

@@ -53,8 +53,11 @@ export const BodyEmptyText: TextProps = {
 }
 
 export const ItemContainer: FlexProps = {
+  width: '100%',
+  height: '100%',
   flexDirection: 'row',
-  justifyContent: 'center' 
+  justifyContent: 'center',
+  alignItems: 'center'
 }
 
 export const ItemImagem: ImageProps = {
@@ -64,6 +67,7 @@ export const ItemImagem: ImageProps = {
 }
 
 export const ItemTextContainer: FlexProps = {
+  flex: 1,
   flexDirection: 'column',
   marginLeft: '5',
   textColor: 'gray.500'
@@ -82,4 +86,8 @@ export const ItemTextQty: TextProps = {
 export const ItemTextTotal: TextProps = {
   fontWeight: 'bold',
   textColor: 'black'
+}
+
+export const ItemTrashIcon: SVGProps<SVGSVGElement> = {
+  cursor: 'pointer'
 }
