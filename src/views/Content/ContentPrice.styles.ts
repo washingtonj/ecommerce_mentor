@@ -1,7 +1,13 @@
 import { FlexProps, TextProps, BadgeProps } from '@chakra-ui/react'
 
 export const Container: FlexProps = {
-  alignItems: 'center',
+  flexDir: {
+    xl: 'column'
+  },
+  alignItems: {
+    base: 'center',
+    xl: 'flex-start'
+  },
   justifyContent: 'space-between'
 }
 
@@ -27,5 +33,8 @@ export const LastPrice: TextProps = {
   fontWeight: 'bold',
   fontSize: 'xl',
   textColor: 'gray.300',
-  textDecoration: 'line-through'
+  textDecoration: 'line-through',
+  marginTop: {
+    xl: 2
+  }
 }

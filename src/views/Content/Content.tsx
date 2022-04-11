@@ -32,7 +32,7 @@ const Content = () => {
           <ContentDescription company={Data.company} model={Data.model}>
             {Data.description}
           </ContentDescription>
-          <ContentPrice value={valueWithDiscount} />
+          <ContentPrice value={valueWithDiscount} discount={Data.price.discount} />
           <ContentPurchase onPurchase={handlePurchase} />
         </Stack>
       </Box>

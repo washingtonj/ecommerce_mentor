@@ -3,7 +3,8 @@ import { TextProps } from '@chakra-ui/react'
 export const Company: TextProps = {
   fontWeight: 'bold',
   fontSize: 'md',
-  textColor: 'orange.400'
+  textColor: 'orange.500',
+  textTransform: 'uppercase'
 }
 
 export const Model: TextProps = {

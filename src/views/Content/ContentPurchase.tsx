@@ -5,7 +5,7 @@ import * as Styles from './ContentPurchase.styles'
 import { ButtonStyle } from 'styles/components'
 
 interface ContentPurchaseProps {
-  onPurchase: (qty: number) => void
+  onPurchase: (qty: number) => void;
 }
 
 const ContentPurchase = (props: ContentPurchaseProps) => {
@@ -13,11 +13,11 @@ const ContentPurchase = (props: ContentPurchaseProps) => {
   const [emptyAlert, setEmptyAlert] = useState(false)
 
   function increase () {
-    setQuantity(prev => prev + 1)
+    setQuantity((prev) => prev + 1)
   }
 
   function decrease () {
-    if (quantity > 0) setQuantity(prev => prev - 1)
+    if (quantity > 0) setQuantity((prev) => prev - 1)
   }
 
   function purchase () {
@@ -29,35 +29,40 @@ const ContentPurchase = (props: ContentPurchaseProps) => {
   }
 
   return (
-    <>
+    <Flex {...Styles.Container}>
       <Tooltip
         label="Insert a quantity would you like to purchase"
-        placement='top'
+        placement="top"
         isDisabled={!emptyAlert}
-        borderRadius='md'
+        borderRadius="md"
         background="orange.400"
         isOpen={emptyAlert}
       >
         <Flex
-          {...Styles.QuantityContainer} onMouseMove={() => setEmptyAlert(false)}>
+          {...Styles.QuantityContainer}
+          onMouseMove={() => setEmptyAlert(false)}
+        >
           <Button data-testid="minus" onClick={() => decrease()}>
             <Minus />
           </Button>
-          <Text data-testid="counter" fontWeight="bold">{quantity}</Text>
+          <Text data-testid="counter" fontWeight="bold">
+            {quantity}
+          </Text>
           <Button data-testid="plus" onClick={() => increase()}>
             <Plus />
           </Button>
         </Flex>
       </Tooltip>
       <Button
-        {...ButtonStyle }
+        {...ButtonStyle}
+        width="100%"
         data-testid="purchase"
-        leftIcon={<Cart width="22" height="20" fill='white' />}
+        leftIcon={<Cart width="22" height="20" fill="white" />}
         onClick={() => purchase()}
       >
         Add to cart
       </Button>
-    </>
+    </Flex>
   )
 }
 
