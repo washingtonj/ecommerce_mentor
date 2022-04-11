@@ -5,6 +5,7 @@ import ContentPurchase from './ContentPurchase'
 import { ImageCarousel } from 'components'
 import { useCart } from 'hooks'
 import Data from './Content.json'
+import * as Styles from './Content.styles'
 
 const Content = () => {
   const Cart = useCart()
@@ -24,7 +25,7 @@ const Content = () => {
   }
 
   return (
-    <Box pb="20">
+    <Box { ...Styles.Content }>
       <ImageCarousel images={Data.images} />
       <Box px="6">
         <Stack spacing="6" mt="6" direction="column">

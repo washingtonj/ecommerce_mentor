@@ -7,9 +7,18 @@ export const Container: BoxProps = {
   position: 'absolute',
   background: 'white',
   zIndex: 5,
-  top: '65px',
-  left: '-15px',
-  width: '95%',
+  top: {
+    sm: '65px',
+    md: '85px'
+  },
+  left: {
+    sm: '-15px',
+    md: '62%'
+  },
+  width: {
+    sm: '95%',
+    md: '450px'
+  },
   borderRadius: 'md',
   boxShadow: 'xl'
 }

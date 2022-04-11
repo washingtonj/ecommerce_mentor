@@ -5,11 +5,18 @@ import {
   BoxProps,
   ContainerProps,
   StackProps,
-  TextProps
+  TextProps,
+  ListProps,
+  ListItemProps
 } from '@chakra-ui/react'
 
 export const Bar: BoxProps = {
-  height: 14
+  display: 'flex',
+  justifyContent: 'center',
+  height: {
+    sm: 14,
+    md: 20
+  }
 }
 
 export const Button: ButtonProps = {
@@ -39,15 +46,33 @@ export const ButtonCount: TextProps = {
 }
 
 export const Container: ContainerProps = {
+  maxW: 'container.xl',
   height: 'full',
   display: 'flex',
   alignItems: 'center',
-  justifyContent: 'space-between'
+  justifyContent: 'space-between',
+  margin: 0,
+  borderBottom: {
+    md: '1px black solid'
+  },
+  borderColor: {
+    md: 'gray.300'
+  }
 }
 
 export const LeftStack: StackProps = {
   width: 'max',
   spacing: 5
+}
+
+export const Logo: SVGProps<SVGSVGElement> = {
+  width: 140,
+  height: 24
+}
+
+export const MenuIcon: SVGProps<SVGSVGElement> = {
+  width: '20',
+  height: '15'
 }
 
 export const RightStack: StackProps = {
@@ -56,7 +81,36 @@ export const RightStack: StackProps = {
 }
 
 export const Avatar: AvatarProps = {
-  width: 6,
-  height: 6,
-  marginLeft: 0
+  cursor: 'pointer',
+  borderWidth: '2px',
+  borderColor: 'white',
+  width: {
+    sm: 8,
+    md: 12
+  },
+  height: {
+    sm: 8,
+    md: 12
+  },
+  marginLeft: 0,
+  _hover: {
+    borderColor: 'orange.400'
+  },
+  transition: 'ease-in 0.2s'
+}
+
+export const MenuList: ListProps = {
+  paddingLeft: 8,
+  display: {
+    sm: 'none',
+    md: 'flex'
+  },
+  textColor: 'gray.500'
+}
+
+export const MenuListItem: ListItemProps = {
+  cursor: 'pointer',
+  _notLast: {
+    marginRight: 8
+  }
 }

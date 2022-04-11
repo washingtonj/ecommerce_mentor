@@ -4,6 +4,10 @@ import { ReactElement } from 'react'
 const Theme = extendTheme({
   shadows: {
     outline: '0 0 0 3px rgba(237, 137, 54, 0.44)'
+  },
+  fonts: {
+    heading: 'Kumbh Sans',
+    body: 'Kumbh Sans'
   }
 })
 

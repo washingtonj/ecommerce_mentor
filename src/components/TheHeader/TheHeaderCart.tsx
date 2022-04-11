@@ -31,7 +31,7 @@ const TheHeaderCart = (props: TheHeaderCartProps) => {
   })
 
   return (
-    <Box {...Styles.Container} ref={ref}>
+    <Box data-testid="the-header-cart" {...Styles.Container} ref={ref}>
       <Flex {...Styles.Header}>
         <Text {...Styles.HeaderText}>Cart</Text>
       </Flex>
@@ -39,7 +39,11 @@ const TheHeaderCart = (props: TheHeaderCartProps) => {
         {hasItem && (
           <>
             {props.data.map((item) => (
-              <Flex key={item.id} {...Styles.ItemContainer}>
+              <Flex
+                data-testid="the-header-cart-item"
+                key={item.id}
+                {...Styles.ItemContainer}
+              >
                 <Image
                   {...Styles.ItemImagem}
                   src={PublicImageLoader(item.imgUrl)}
@@ -57,14 +61,27 @@ const TheHeaderCart = (props: TheHeaderCartProps) => {
                 </Flex>
                 <DeleteIcon
                   {...Styles.ItemTrashIcon}
+                  data-testid="the-header-cart-remove-button"
                   onClick={() => props.onRemove(String(item.id))}
                 />
               </Flex>
             ))}
-            <Button {...ButtonStyle}>Checkout</Button>
+            <Button
+              data-testid="the-header-cart-checkout-button"
+              {...ButtonStyle}
+            >
+              Checkout
+            </Button>
           </>
         )}
-        {!hasItem && <Text {...Styles.BodyEmptyText}>Your cart is empty.</Text>}
+        {!hasItem && (
+          <Text
+            data-testid="the-header-cart-empty-text"
+            {...Styles.BodyEmptyText}
+          >
+            Your cart is empty.
+          </Text>
+        )}
       </Flex>
     </Box>
   )
