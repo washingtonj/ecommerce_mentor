@@ -8,15 +8,15 @@ export const Container: BoxProps = {
   background: 'white',
   zIndex: 5,
   top: {
-    sm: '65px',
+    base: '65px',
     md: '85px'
   },
-  left: {
-    sm: '-15px',
-    md: '62%'
+  right: {
+    base: '15px',
+    xl: '0.5'
   },
   width: {
-    sm: '95%',
+    base: '95%',
     md: '450px'
   },
   borderRadius: 'md',

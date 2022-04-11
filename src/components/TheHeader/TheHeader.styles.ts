@@ -14,7 +14,7 @@ export const Bar: BoxProps = {
   display: 'flex',
   justifyContent: 'center',
   height: {
-    sm: 14,
+    base: 14,
     md: 20
   }
 }
@@ -46,6 +46,7 @@ export const ButtonCount: TextProps = {
 }
 
 export const Container: ContainerProps = {
+  position: 'relative',
   maxW: 'container.xl',
   height: 'full',
   display: 'flex',
@@ -61,6 +62,7 @@ export const Container: ContainerProps = {
 }
 
 export const LeftStack: StackProps = {
+  height: 'full',
   width: 'max',
   spacing: 5
 }
@@ -85,11 +87,11 @@ export const Avatar: AvatarProps = {
   borderWidth: '2px',
   borderColor: 'white',
   width: {
-    sm: 8,
+    base: 8,
     md: 12
   },
   height: {
-    sm: 8,
+    base: 8,
     md: 12
   },
   marginLeft: 0,
@@ -100,17 +102,31 @@ export const Avatar: AvatarProps = {
 }
 
 export const MenuList: ListProps = {
+  height: '100%',
   paddingLeft: 8,
   display: {
-    sm: 'none',
-    md: 'flex'
+    base: 'none',
+    lg: 'flex'
   },
   textColor: 'gray.500'
 }
 
 export const MenuListItem: ListItemProps = {
+  display: 'flex',
+  paddingLeft: '3',
+  paddingRight: '4',
+  paddingTop: '4px',
+  alignItems: 'center',
+  height: 'full',
+  borderBottomWidth: '3px',
+  borderBottomColor: 'transparent',
   cursor: 'pointer',
+  transition: 'ease-in-out 0.2s',
   _notLast: {
-    marginRight: 8
+    marginRight: 4
+  },
+  _hover: {
+    textColor: 'black',
+    borderBottomColor: 'orange.400'
   }
 }
