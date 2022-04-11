@@ -8,5 +8,3 @@ export const QuantityContainer: FlexProps = {
   alignItems: 'center',
   justifyContent: 'space-between'
 }
-
- 

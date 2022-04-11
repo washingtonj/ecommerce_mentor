@@ -1,7 +1,6 @@
-import { ToCurrency } from "utils";
+import { ToCurrency } from 'utils'
 
 describe('To currency utils', () => {
-
   it('Should transform value to USD currency', () => {
     const value = ToCurrency(500, 'USD')
     expect(value).toBe('$500.00')

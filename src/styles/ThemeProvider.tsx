@@ -1,4 +1,5 @@
 import { ChakraProvider, extendTheme, Box } from '@chakra-ui/react'
+import { ReactElement } from 'react'
 
 const Theme = extendTheme({
   shadows: {
@@ -6,11 +7,14 @@ const Theme = extendTheme({
   }
 })
 
-export const ThemeProvider: React.FC = ({ children }) => (
+export const ThemeProvider = ({
+  children
+}: {
+  children: ReactElement | ReactElement;
+}) => (
   <ChakraProvider theme={Theme} resetCSS>
     <Box width="full" height="100vh" background="white" textColor="black">
       {children}
     </Box>
   </ChakraProvider>
 )
-

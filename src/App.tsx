@@ -1,9 +1,9 @@
 import { ThemeProvider } from 'styles/ThemeProvider'
 import { TheHeader } from 'components'
 import { Content } from 'views'
-import { CartProvider } from 'contexts';
+import { CartProvider } from 'contexts'
 
-function App() {
+function App () {
   return (
     <ThemeProvider>
       <CartProvider>
@@ -11,7 +11,7 @@ function App() {
         <Content />
       </CartProvider>
     </ThemeProvider>
-  );
+  )
 }
 
-export default App;
+export default App

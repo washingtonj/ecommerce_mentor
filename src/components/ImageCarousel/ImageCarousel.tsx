@@ -11,24 +11,21 @@ export interface ImageCarouselProps {
   }[]
 }
 
-
 const ImageCarousel = ({ images }: ImageCarouselProps) => {
   const [current, setCurrent] = useState(0)
   const total = images.length
 
-
-  function nextImage() {
+  function nextImage () {
     setCurrent((prev) => prev < total - 1 ? prev + 1 : prev)
   }
 
-  function previousImage() {
+  function previousImage () {
     setCurrent(prev => prev !== 0 ? prev - 1 : prev)
-    
   }
 
   return (
     <Box { ...Styles.Container }>
-      <Image  {...Styles.Image} src={PublicImageLoader(images[current].original)} />
+      <Image {...Styles.Image} src={PublicImageLoader(images[current].original)} />
       <Box { ...Styles.ActionsContainer }>
         <Button {...Styles.Buttons} data-testid="previous" onClick={() => previousImage()}>
           <Previous />

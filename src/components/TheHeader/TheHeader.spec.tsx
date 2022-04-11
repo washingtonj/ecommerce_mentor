@@ -7,7 +7,7 @@ describe('TheHeader Mobile', () => {
   })
 
   it('Should render the component', () => {
-    const logo = screen.getByTestId("the-header")
+    const logo = screen.getByTestId('the-header')
     expect(logo).toBeInTheDocument()
   })
 })

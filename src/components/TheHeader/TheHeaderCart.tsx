@@ -1,17 +1,17 @@
-import { useRef } from "react";
+import { useRef } from 'react'
 import {
   Box,
   Flex,
   Text,
   useOutsideClick,
   Image,
-  Button,
-} from "@chakra-ui/react";
-import { Delete as DeleteIcon } from "assets/icons";
-import * as Styles from "./TheHeaderCart.styles";
-import { PublicImageLoader, ToCurrency } from "utils";
-import { ICartItem } from "contexts";
-import { ButtonStyle } from "styles/components";
+  Button
+} from '@chakra-ui/react'
+import { Delete as DeleteIcon } from 'assets/icons'
+import * as Styles from './TheHeaderCart.styles'
+import { PublicImageLoader, ToCurrency } from 'utils'
+import { ICartItem } from 'contexts'
+import { ButtonStyle } from 'styles/components'
 
 interface TheHeaderCartProps {
   onClose: () => void;
@@ -20,15 +20,15 @@ interface TheHeaderCartProps {
 }
 
 const TheHeaderCart = (props: TheHeaderCartProps) => {
-  const ref = useRef(null);
+  const ref = useRef(null)
 
-  const hasItem = props.data.length > 0;
+  const hasItem = props.data.length > 0
 
   useOutsideClick({
     ref: ref,
     handler: props.onClose,
-    enabled: true,
-  });
+    enabled: true
+  })
 
   return (
     <Box {...Styles.Container} ref={ref}>
@@ -48,10 +48,10 @@ const TheHeaderCart = (props: TheHeaderCartProps) => {
                   <Text {...Styles.ItemTextTitle}>{item.name}</Text>
                   <Flex {...Styles.ItemPriceContainer}>
                     <Text {...Styles.ItemTextQty}>
-                      {ToCurrency(item.price, "USD")} x {item.quantity}
+                      {ToCurrency(item.price, 'USD')} x {item.quantity}
                     </Text>
                     <Text {...Styles.ItemTextTotal}>
-                      {ToCurrency(item.price * item.quantity, "USD")}
+                      {ToCurrency(item.price * item.quantity, 'USD')}
                     </Text>
                   </Flex>
                 </Flex>
@@ -67,7 +67,7 @@ const TheHeaderCart = (props: TheHeaderCartProps) => {
         {!hasItem && <Text {...Styles.BodyEmptyText}>Your cart is empty.</Text>}
       </Flex>
     </Box>
-  );
-};
+  )
+}
 
-export default TheHeaderCart;
+export default TheHeaderCart

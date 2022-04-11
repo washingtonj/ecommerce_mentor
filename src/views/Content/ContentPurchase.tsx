@@ -12,15 +12,15 @@ const ContentPurchase = (props: ContentPurchaseProps) => {
   const [quantity, setQuantity] = useState(0)
   const [emptyAlert, setEmptyAlert] = useState(false)
 
-  function increase() {
+  function increase () {
     setQuantity(prev => prev + 1)
   }
 
-  function decrease() {
+  function decrease () {
     if (quantity > 0) setQuantity(prev => prev - 1)
   }
 
-  function purchase() {
+  function purchase () {
     if (quantity === 0) setEmptyAlert(true)
     else {
       props.onPurchase(quantity)
@@ -38,7 +38,7 @@ const ContentPurchase = (props: ContentPurchaseProps) => {
         background="orange.400"
         isOpen={emptyAlert}
       >
-        <Flex 
+        <Flex
           {...Styles.QuantityContainer} onMouseMove={() => setEmptyAlert(false)}>
           <Button data-testid="minus" onClick={() => decrease()}>
             <Minus />
@@ -49,8 +49,8 @@ const ContentPurchase = (props: ContentPurchaseProps) => {
           </Button>
         </Flex>
       </Tooltip>
-      <Button 
-        {...ButtonStyle } 
+      <Button
+        {...ButtonStyle }
         data-testid="purchase"
         leftIcon={<Cart width="22" height="20" fill='white' />}
         onClick={() => purchase()}

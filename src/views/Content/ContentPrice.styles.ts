@@ -1,8 +1,8 @@
 import { FlexProps, TextProps, BadgeProps } from '@chakra-ui/react'
 
 export const Container: FlexProps = {
-  alignItems: "center",
-  justifyContent: "space-between"
+  alignItems: 'center',
+  justifyContent: 'space-between'
 }
 
 export const PriceContainer: FlexProps = {

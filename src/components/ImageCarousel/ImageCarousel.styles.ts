@@ -6,22 +6,22 @@ export const Container: BoxProps = {
 }
 
 export const Image: ImageProps = {
-  width: "full",
+  width: 'full',
   height: 80,
-  objectFit: "cover",
+  objectFit: 'cover'
 }
 
 export const ActionsContainer: BoxProps = {
-  width: "full",
+  width: 'full',
   position: 'absolute',
-  top: "42%",
+  top: '42%',
   display: 'flex',
-  paddingX: "3.5",
+  paddingX: '3.5',
   justifyContent: 'space-between'
 }
 
 export const Buttons: ButtonProps = {
   borderRadius: 'full',
-  width: "12",
-  height: "12"
+  width: '12',
+  height: '12'
 }

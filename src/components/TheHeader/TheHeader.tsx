@@ -1,12 +1,12 @@
-import { Box, HStack, Container, Avatar, Button, Text } from "@chakra-ui/react";
-import { Logo, Menu, Cart as CartIcon } from "assets/icons";
-import { useCart } from "hooks";
-import { PublicImageLoader } from "utils";
-import * as Styles from "./TheHeader.styles";
-import TheHeaderCart from "./TheHeaderCart";
+import { Box, HStack, Container, Avatar, Button, Text } from '@chakra-ui/react'
+import { Logo, Menu, Cart as CartIcon } from 'assets/icons'
+import { useCart } from 'hooks'
+import { PublicImageLoader } from 'utils'
+import * as Styles from './TheHeader.styles'
+import TheHeaderCart from './TheHeaderCart'
 
 const TheHeader = () => {
-  const Cart = useCart();
+  const Cart = useCart()
 
   return (
     <Box data-testid="the-header" {...Styles.Bar}>
@@ -31,12 +31,12 @@ const TheHeader = () => {
           )}
           <Avatar
             {...Styles.Avatar}
-            src={PublicImageLoader("/images/image-avatar.png")}
+            src={PublicImageLoader('/images/image-avatar.png')}
           />
         </HStack>
       </Container>
     </Box>
-  );
-};
+  )
+}
 
-export default TheHeader;
+export default TheHeader

@@ -19,11 +19,11 @@ export const Header: FlexProps = {
   height: 14,
   borderBottom: '1px solid',
   borderColor: 'gray.200',
-  paddingX,
+  paddingX
 }
 
 export const HeaderText: TextProps = {
-  fontWeight: 'bold',
+  fontWeight: 'bold'
 }
 
 export const Body: FlexProps = {

@@ -1,17 +1,17 @@
-import { Stack, Box } from "@chakra-ui/react";
-import ContentPrice from "./ContentPrice";
-import ContentDescription from "./ContentDescription";
-import ContentPurchase from "./ContentPurchase";
-import { ImageCarousel } from "components";
-import { useCart } from "hooks";
-import Data from "./Content.json";
+import { Stack, Box } from '@chakra-ui/react'
+import ContentPrice from './ContentPrice'
+import ContentDescription from './ContentDescription'
+import ContentPurchase from './ContentPurchase'
+import { ImageCarousel } from 'components'
+import { useCart } from 'hooks'
+import Data from './Content.json'
 
 const Content = () => {
-  const Cart = useCart();
+  const Cart = useCart()
 
   const valueWithDiscount = (Data.price.total * (1 - (Data.price.discount / 100)))
 
-  function handlePurchase(qty: number) {
+  function handlePurchase (qty: number) {
     Cart.addItem({
       id: Data.id,
       imgUrl: Data.images[0].thumbnail,
@@ -20,9 +20,8 @@ const Content = () => {
       quantity: qty
     })
     Cart.toggleCart()
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    window.scrollTo({ top: 0, behavior: 'smooth' })
   }
-  
 
   return (
     <Box pb="20">
@@ -37,7 +36,7 @@ const Content = () => {
         </Stack>
       </Box>
     </Box>
-  );
-};
+  )
+}
 
-export default Content;
+export default Content

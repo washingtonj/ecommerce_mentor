@@ -1,7 +1,6 @@
 import { render, screen, fireEvent } from '@testing-library/react'
 import ImageCarousel from './ImageCarousel'
 
-
 describe('Image Carousel Component', () => {
   let nextButton: HTMLButtonElement
   let previousButton: HTMLButtonElement
@@ -13,7 +12,6 @@ describe('Image Carousel Component', () => {
       { original: '/images/image-product-3.jpg', thumbnail: '/images/image-product-3-thumbnail.jpg' },
       { original: '/images/image-product-4.jpg', thumbnail: '/images/image-product-4-thumbnail.jpg' }
     ]} />)
-
 
     nextButton = screen.getByTestId('next') as HTMLButtonElement
     previousButton = screen.getByTestId('previous') as HTMLButtonElement
@@ -35,7 +33,7 @@ describe('Image Carousel Component', () => {
     fireEvent.click(nextButton)
     fireEvent.click(nextButton)
     fireEvent.click(previousButton)
-    
+
     const component = document.querySelector('img') as HTMLImageElement
     expect(component.src).toContain('image-product-2')
   })

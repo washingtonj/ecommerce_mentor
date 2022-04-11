@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react'
-import ContentPrice from "./ContentPrice";
+import ContentPrice from './ContentPrice'
 
 describe('Content - Price', () => {
   beforeEach(() => {
