@@ -1,8 +1,8 @@
 {
-  "name": "ecommerce_mentor",
+  "name": "sneakers",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://washingtonj.github.io/ecommerce_mentor/",
+  "homepage": "https://washingtonj.github.io/sneakers/",
   "dependencies": {
     "@chakra-ui/react": "^1.6.10",
     "@emotion/react": "^11",
