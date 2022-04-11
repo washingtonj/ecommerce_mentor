@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.js": "/ecommerce_mentor/static/js/main.166c3508.chunk.js",
-    "main.js.map": "/ecommerce_mentor/static/js/main.166c3508.chunk.js.map",
-    "runtime-main.js": "/ecommerce_mentor/static/js/runtime-main.4593ab75.js",
-    "runtime-main.js.map": "/ecommerce_mentor/static/js/runtime-main.4593ab75.js.map",
-    "static/js/2.bb773a3e.chunk.js": "/ecommerce_mentor/static/js/2.bb773a3e.chunk.js",
-    "static/js/2.bb773a3e.chunk.js.map": "/ecommerce_mentor/static/js/2.bb773a3e.chunk.js.map",
-    "index.html": "/ecommerce_mentor/index.html",
-    "static/js/2.bb773a3e.chunk.js.LICENSE.txt": "/ecommerce_mentor/static/js/2.bb773a3e.chunk.js.LICENSE.txt",
-    "static/media/icon-cart.763b6bfd.svg": "/ecommerce_mentor/static/media/icon-cart.763b6bfd.svg",
-    "static/media/icon-close.c3904486.svg": "/ecommerce_mentor/static/media/icon-close.c3904486.svg",
-    "static/media/icon-delete.1fd1f1f7.svg": "/ecommerce_mentor/static/media/icon-delete.1fd1f1f7.svg",
-    "static/media/icon-menu.58801627.svg": "/ecommerce_mentor/static/media/icon-menu.58801627.svg",
-    "static/media/icon-minus.f5073aa8.svg": "/ecommerce_mentor/static/media/icon-minus.f5073aa8.svg",
-    "static/media/icon-next.9621183a.svg": "/ecommerce_mentor/static/media/icon-next.9621183a.svg",
-    "static/media/icon-plus.b297868c.svg": "/ecommerce_mentor/static/media/icon-plus.b297868c.svg",
-    "static/media/icon-previous.80616402.svg": "/ecommerce_mentor/static/media/icon-previous.80616402.svg",
-    "static/media/logo.fa270669.svg": "/ecommerce_mentor/static/media/logo.fa270669.svg"
+    "main.js": "/sneakers/static/js/main.919df1b6.chunk.js",
+    "main.js.map": "/sneakers/static/js/main.919df1b6.chunk.js.map",
+    "runtime-main.js": "/sneakers/static/js/runtime-main.40bfc36d.js",
+    "runtime-main.js.map": "/sneakers/static/js/runtime-main.40bfc36d.js.map",
+    "static/js/2.86420fa0.chunk.js": "/sneakers/static/js/2.86420fa0.chunk.js",
+    "static/js/2.86420fa0.chunk.js.map": "/sneakers/static/js/2.86420fa0.chunk.js.map",
+    "index.html": "/sneakers/index.html",
+    "static/js/2.86420fa0.chunk.js.LICENSE.txt": "/sneakers/static/js/2.86420fa0.chunk.js.LICENSE.txt",
+    "static/media/icon-cart.763b6bfd.svg": "/sneakers/static/media/icon-cart.763b6bfd.svg",
+    "static/media/icon-close.c3904486.svg": "/sneakers/static/media/icon-close.c3904486.svg",
+    "static/media/icon-delete.1fd1f1f7.svg": "/sneakers/static/media/icon-delete.1fd1f1f7.svg",
+    "static/media/icon-menu.58801627.svg": "/sneakers/static/media/icon-menu.58801627.svg",
+    "static/media/icon-minus.f5073aa8.svg": "/sneakers/static/media/icon-minus.f5073aa8.svg",
+    "static/media/icon-next.9621183a.svg": "/sneakers/static/media/icon-next.9621183a.svg",
+    "static/media/icon-plus.b297868c.svg": "/sneakers/static/media/icon-plus.b297868c.svg",
+    "static/media/icon-previous.80616402.svg": "/sneakers/static/media/icon-previous.80616402.svg",
+    "static/media/logo.fa270669.svg": "/sneakers/static/media/logo.fa270669.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.4593ab75.js",
-    "static/js/2.bb773a3e.chunk.js",
-    "static/js/main.166c3508.chunk.js"
+    "static/js/runtime-main.40bfc36d.js",
+    "static/js/2.86420fa0.chunk.js",
+    "static/js/main.919df1b6.chunk.js"
   ]
 }
